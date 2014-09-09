@@ -36,7 +36,11 @@
 		<scope>provided</scope>
 	</dependency>
   </dependencies>
-  
+  <scm>
+	<connection>scm:git:git@github.com:Philippe-Caparroy/Nutch-plugins.git</connection>
+	<url>scm:git:git@github.com:Philippe-Caparroy/Nutch-plugins.git</url>
+	<developerConnection>scm:git:git@github.com:Philippe-Caparroy/Nutch-plugins.git</developerConnection>
+  </scm>
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -78,7 +82,16 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.0-beta-9</version>
+      </plugin>
+    </plugins>
 	</build>
+	
+	
 
 	
 </project>
