@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin id="scoring-nextpage" name="Apache Nutch Browser like outlink Filter" version="1.4" provider-name="nutch.org">
+
+   	<runtime>
+      	<library name="scoring-nextpage.jar">
+         	<export name="*"/>
+      	</library>
+      	
+   	</runtime>
+	<compile>
+	</compile>
+   	<requires>
+      	<import plugin="nutch-extensionpoints"/>
+     
+   	</requires>
+
+
+   	<extension id="org.apache.nutch.scoring.ScoringFilter"
+      name="Nutch Scoring"
+              point="org.apache.nutch.scoring.ScoringFilter">
+
+      <implementation id="org.apache.nutch.scoring.nextpage.NextPageAnalysisScoringFilter"
+        class="org.apache.nutch.scoring.nextpage.NextPageAnalysisScoringFilter" />
+        
+        </extension>
+
+</plugin>
